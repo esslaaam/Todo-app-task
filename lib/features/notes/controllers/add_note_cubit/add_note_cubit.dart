@@ -43,7 +43,7 @@ class AddNoteCubit extends Cubit<AddNoteState> {
   void saveAndAddNote() {
     if (formKey.currentState!.validate()) {
       var now = DateTime.now();
-      formattedCurrentDate = DateFormat('dd-mm-yyyy').format(now);
+      formattedCurrentDate = DateFormat('dd-MM-yyyy \t hh:mm a').format(now);
       addNote(note: NoteModel(
               title: titleCtrl.text,
               subTitle: subTitleCtrl.text,

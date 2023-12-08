@@ -37,7 +37,7 @@ class EditNoteCubit extends Cubit<EditNoteState> {
   void editNote({required NoteModel note,required BuildContext? context}) async {
     if (formKey.currentState!.validate()) {
       var now = DateTime.now();
-      var formattedCurrentDate = DateFormat('dd-mm-yyyy').format(now);
+      var formattedCurrentDate = DateFormat('dd-MM-yyyy \t hh:mm a').format(now);
       note.title = titleCtrl.text;
       note.subTitle = subTitleCtrl.text;
       note.date = formattedCurrentDate;

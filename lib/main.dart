@@ -35,6 +35,7 @@ class TodoApp extends StatelessWidget {
       builder: (context, child) => BlocProvider(
         create: (context) => NotesCubit()..fetchAllNotes(),
         child: MaterialApp(
+          title: "Todo app",
           debugShowCheckedModeBanner: false,
           theme: ThemeData(brightness: Brightness.dark, fontFamily: kPoppins),
           home: child,
